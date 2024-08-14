@@ -7,7 +7,7 @@ function Jobcard({ title, company, postedOn, skills, job_link, type, experience,
     const diffInDays = currentDate.diff(targetDate, 'day'); // Calculate the difference
 
     return (
-        <div className='mx-4 mb-4 sm:mx-10'>
+        <div className='mx-4 mb-4 sm:mx-10 pt-8'> {/* Padding from the top */}
             <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center px-6 py-4 bg-zinc-200 rounded-md border border-black shadow-lg hover:border-blue-500 hover:translate-y-1 hover:scale-103'>
                 <div className='flex flex-col items-start gap-3'>
                     <h1 className='text-lg font-semibold'>{title} - {company}</h1>

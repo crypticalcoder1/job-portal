@@ -1,12 +1,13 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-
+// firebase.config.js
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
+import { getAuth } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBxO8qVALRV2LGLDkt2g5V4dxUddNSLg_c",
   authDomain: "online-job-portal-5a8c9.firebaseapp.com",
+  databaseURL: "https://online-job-portal-5a8c9-default-rtdb.firebaseio.com",
   projectId: "online-job-portal-5a8c9",
   storageBucket: "online-job-portal-5a8c9.appspot.com",
   messagingSenderId: "406649809249",
@@ -15,6 +16,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore();
 
-export {db};
+// Initialize Firestore and Auth services
+const db = getFirestore(app);
+const auth = getAuth(app);
+
+export { db, auth };
+
